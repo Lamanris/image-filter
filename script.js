@@ -3,6 +3,10 @@ let sepia = document.querySelector('.sepia')
 let invert = document.querySelector('.invert')
 let filterImg = document.querySelector('.filter-img')
 let filterInput = document.querySelector('#filterInput')
+let inputNum = document.querySelector('.input-num')
+
+
+changeFilter('blur')
 
 blur.addEventListener('click', () => {
     changeFilter('blur')
@@ -19,10 +23,13 @@ function changeFilter (filterType) {
     filterInput.addEventListener('input', () => {
         if (filterType === 'blur') {
             filterImg.style.filter = `${filterType}(${filterInput.value}px)`
+            inputNum.textContent = `${filterInput.value}%`
         }
         filterImg.style.filter = `${filterType}(${filterInput.value}%)`
     })
 }
+
+
 
 
 
