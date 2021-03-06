@@ -29,9 +29,34 @@ img {
     cursor: pointer;
 }
 
-.filter-input {
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 48px 0 72px;
 }
+
+.filter-input {
+    width: 404px;
+    margin-right: 9px;
+}
+
+.filter-input[type=range] {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    outline: none;
+    height: 5px;
+    background-color: #B0B0B0;
+}
+.filter-input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 18px;
+    width: 18px;
+    background: #060DB9;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
 
 .filter-img__wrapper{
     width: 644px;

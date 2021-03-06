@@ -20,6 +20,7 @@ invert.addEventListener('click', () => {
 function changeFilter (filterType) {
     filterInput.value = 0
     filterImg.style.filter = 'none'
+    inputNum.textContent = '0%'
     filterInput.addEventListener('input', () => {
         if (filterType === 'blur') {
             filterImg.style.filter = `${filterType}(${filterInput.value}px)`
